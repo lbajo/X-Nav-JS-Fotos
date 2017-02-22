@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Mostrador aleatorio de imágenes</title>
+     <script type="text/javascript" charset="utf-8">
+     function randomImage () {
+       var images = ['https://upload.wikimedia.org/wikipedia/commons/a/a1/Lamiastrum_galeobdolon.jpg',
+       'https://upload.wikimedia.org/wikipedia/commons/f/f9/Magnolia_grandiflora1Stuart_Yeates.jpg',
+       'https://upload.wikimedia.org/wikipedia/commons/c/c5/P%C3%A9talo-s%C3%A9palo.jpg',
+       'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cymbidium08.jpg/800px-Cymbidium08.jpg'
+       ];
+       element = document.getElementById('tag');
+       URL = images[Math.floor(Math.random()*images.length)]
+       element.innerHTML = '<img src="' + URL + '">';
+     }
+   </script>
+  </head>
+  <body>
+    <p>Images.. <a href="javascript:randomImage()">Give me another image!</a></p>
+    <span id="tag"></span>
+  </body>
+</html>
